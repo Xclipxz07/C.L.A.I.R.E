@@ -1,0 +1,10 @@
+# Minimal Requirements - Just what's needed to run Claire
+# Install these first to get started
+
+# Core essentials
+pyyaml==6.0.1
+requests==2.31.0
+python-dotenv==1.0.0
+
+# Optional: For better date/time handling
+python-dateutil==2.8.2

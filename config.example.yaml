@@ -1,0 +1,138 @@
+# C.L.A.I.R.E Configuration File
+# Copy this to config.yaml and fill in your values
+
+# AI Provider Settings - Using Ollama (100% Local & Private)
+ai:
+  provider: "ollama"  # Local LLM - no API keys needed!
+  temperature: 0.7
+  max_tokens: 500
+  
+  # Ollama settings (Download from: https://ollama.ai)
+  ollama:
+    url: "http://localhost:11434"
+    model: "phi"  # Options: llama2, mistral, codellama, phi, gemma
+    # Install models: ollama pull phi
+
+# Voice Settings
+voice:
+  # Speech Recognition
+  stt:
+    provider: "google"  # Options: google, whisper, azure
+    language: "en-US"
+    azure_key: ""
+    azure_region: ""
+  
+  # Text to Speech
+  tts:
+    provider: "pyttsx3"  # Options: pyttsx3, gtts, azure, elevenlabs
+    voice_rate: 150
+    volume: 0.9
+    voice_gender: "female"  # or male
+    elevenlabs_api_key: ""
+    elevenlabs_voice_id: ""
+  
+  # Wake Word
+  wake_word:
+    enabled: true
+    keyword: "hey claire"
+    porcupine_key: "your-picovoice-access-key"
+    sensitivity: 0.5
+
+# Assistant Settings
+assistant:
+  name: "Claire"
+  personality: "helpful, friendly, and efficient"
+  response_style: "concise but informative"
+  conversation_memory: 10  # Number of previous messages to remember
+  
+# Skills/Features
+skills:
+  weather:
+    enabled: true
+    api_key: "your-openweathermap-api-key"
+    default_location: "New York"
+    units: "metric"  # or imperial
+  
+  calendar:
+    enabled: false
+    provider: "google"  # google, outlook
+    credentials_path: "./credentials/calendar.json"
+  
+  email:
+    enabled: false
+    provider: "gmail"
+    credentials_path: "./credentials/email.json"
+  
+  web_search:
+    enabled: true
+    provider: "google"
+    api_key: ""
+    search_engine_id: ""
+  
+  smart_home:
+    enabled: false
+    provider: "homeassistant"  # homeassistant, homekit
+    url: "http://homeassistant.local:8123"
+    token: ""
+  
+  system_control:
+    enabled: true
+    allow_shutdown: false
+    allow_file_operations: true
+    allowed_directories:
+      - "C:\\Users\\wwwdh\\Documents"
+      - "C:\\Users\\wwwdh\\Desktop"
+
+# Server Settings (for mobile/API access)
+server:
+  enabled: false
+  host: "0.0.0.0"
+  port: 8000
+  cors_origins:
+    - "http://localhost:3000"
+  
+  # Authentication
+  auth:
+    enabled: true
+    secret_key: "your-secret-key-change-this"
+    jwt_expiration: 7  # days
+
+# Database
+database:
+  type: "sqlite"  # sqlite, postgresql
+  sqlite_path: "./data/claire.db"
+  # PostgreSQL settings
+  postgres:
+    host: "localhost"
+    port: 5432
+    database: "claire"
+    username: ""
+    password: ""
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "./logs/claire.log"
+  max_size_mb: 10
+  backup_count: 5
+
+# UI Settings
+ui:
+  theme: "dark"  # dark, light
+  minimize_to_tray: true
+  start_on_boot: false
+  hotkey: "ctrl+shift+s"
+  window_opacity: 0.95
+
+# Privacy
+privacy:
+  save_conversation_history: true
+  send_telemetry: false
+  local_processing_only: false  # Use only offline models
+
+# Advanced
+advanced:
+  timeout: 30  # seconds
+  retry_attempts: 3
+  cache_responses: true
+  cache_duration: 3600  # seconds

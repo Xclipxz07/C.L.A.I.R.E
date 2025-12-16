@@ -1,0 +1,56 @@
+# Python virtual environment
+venv/
+env/
+ENV/
+.venv
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Configuration
+config.yaml
+.env
+
+# Credentials
+credentials/
+*.pem
+*.key
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Temporary
+temp/
+tmp/
+*.tmp
