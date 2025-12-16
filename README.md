@@ -1,8 +1,15 @@
-# C.L.A.I.R.E - Conversational Language AI Responsive Entity
+# C.L.A.I.R.E v2.1 - Conversational Language AI Responsive Entity
 ### Your Personal AI Assistant
 
+[![GitHub](https://img.shields.io/badge/GitHub-Xclipxz07-blue?logo=github)](https://github.com/Xclipxz07/C.L.A.I.R.E)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](https://www.python.org/)
+[![Ollama](https://img.shields.io/badge/AI-Ollama-green)](https://ollama.ai)
+
+<img width="1920" height="1080" alt="Screenshot (13)" src="https://github.com/user-attachments/assets/944a88ce-f77e-4c04-856e-c1418d6a69d6" />
+
+
 ## 🎯 Project Overview
-C.L.A.I.R.E is a JARVIS-like AI personal assistant designed to work seamlessly across your laptop and phone, helping with tasks, answering questions, controlling devices, and automating your daily workflows.
+C.L.A.I.R.E is a JARVIS-like AI personal assistant that runs 100% locally on your computer. Built with Python and powered by Ollama, Claire provides intelligent assistance without sending your data to the cloud.
 
 ## 🏗️ Architecture
 
@@ -40,207 +47,32 @@ C.L.A.I.R.E is a JARVIS-like AI personal assistant designed to work seamlessly a
    - Mobile app (Android/iOS)
    - Web interface (optional)
 
-## 🛠️ Technology Stack
+## ✅ Current Status
 
-### Recommended Stack
+### Completed Features
+- ✅ Project structure and architecture
+- ✅ Local AI integration (Ollama/Llama2)
+- ✅ Conversation context management
+- ✅ Plugin/skill architecture
+- ✅ Basic skills (weather, system commands)
+- ✅ Desktop GUI (PyQt6)
+- ✅ Terminal UI mode
+- ✅ Configuration system
+- ✅ Standalone .exe build system
+- ✅ GitHub repository
 
-#### Backend (Core AI Engine)
-- **Language**: Python 3.10+
-- **Framework**: FastAPI or Flask
-- **AI/NLP**: 
-  - OpenAI API (GPT-4) or Anthropic Claude
-  - Alternative: Local LLMs (Llama, Mistral via Ollama)
-  - Langchain for LLM orchestration
-- **Speech Recognition**: 
-  - Online: Google Speech API, Azure Speech Services
-  - Offline: Whisper (OpenAI), Vosk
-- **Text-to-Speech**:
-  - Online: Google TTS, Azure TTS, ElevenLabs
-  - Offline: pyttsx3, Coqui TTS
-- **Wake Word**: Porcupine (Picovoice)
-- **Database**: SQLite (start), PostgreSQL (scale)
-
-#### Desktop Client
-- **Option 1**: Python (PyQt6/PySide6 or Tkinter)
-- **Option 2**: Electron (JavaScript/TypeScript)
-- **Option 3**: Tauri (Rust + Web)
-
-#### Mobile Client
-- **Option 1**: React Native (cross-platform)
-- **Option 2**: Flutter (cross-platform)
-- **Option 3**: Native (Kotlin for Android, Swift for iOS)
-
-## 📋 Implementation Phases
-
-### Phase 1: Basic Foundation (Week 1-2)
-- [ ] Set up project structure
-- [ ] Implement basic voice recognition (speech-to-text)
-- [ ] Implement text-to-speech response
-- [ ] Create simple command processor
-- [ ] Test with basic commands (time, date, weather)
-
-### Phase 2: AI Integration (Week 3-4)
-- [ ] Integrate with OpenAI API or local LLM
-- [ ] Implement conversation context management
-- [ ] Add intent classification
-- [ ] Create plugin/skill architecture
-- [ ] Implement 3-5 basic skills
-
-### Phase 3: Desktop Application (Week 5-6)
-- [ ] Create desktop GUI
-- [ ] Implement wake word detection
-- [ ] Add system tray integration
-- [ ] Create settings interface
-- [ ] Add hotkey support
-
-### Phase 4: Backend API (Week 7-8)
-- [ ] Build REST API server
-- [ ] Implement WebSocket for real-time communication
-- [ ] Add user authentication
-- [ ] Create cloud sync for settings/history
-- [ ] Deploy to cloud (AWS/Azure/GCP)
-
-### Phase 5: Mobile App (Week 9-12)
-- [ ] Design mobile UI
-- [ ] Implement voice interface for mobile
-- [ ] Connect to backend API
-- [ ] Add push notifications
-- [ ] Test on both Android and iOS
-
-### Phase 6: Advanced Features (Ongoing)
-- [ ] Smart home integration (Home Assistant, HomeKit)
-- [ ] Calendar and email integration
-- [ ] Task automation (IFTTT-style)
-- [ ] Screen awareness (see what you're working on)
-- [ ] Proactive suggestions
-- [ ] Multi-language support
-
-## 🚀 Quick Start Guide
-
-### Prerequisites
-```bash
-# Python 3.10 or higher
-python --version
-
-# pip for package management
-pip --version
-
-# Git for version control
-git --version
-```
-
-### Installation
-
-1. **Clone and Setup**
-```bash
-cd "C.L.A.I.R.E"
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# Mac/Linux
-source venv/bin/activate
-
-pip install -r requirements.txt
-```
-
-2. **Configure API Keys**
-```bash
-# Copy example config
-cp config.example.yaml config.yaml
-
-# Edit config.yaml with your API keys:
-# - OpenAI API key (for AI)
-# - Weather API key
-# - etc.
-```
-
-3. **Run Basic Version**
-```bash
-python main.py
-```
-
-## 🔑 Required API Keys (Get These)
-
-1. **OpenAI API** (for AI brain)
-   - Sign up: https://platform.openai.com/
-   - Cost: ~$0.01-0.10 per interaction
-
-2. **Weather API** (for weather info)
-   - Free option: https://openweathermap.org/api
-   - Get free API key
-
-3. **Google Cloud** (optional, for better voice)
-   - Speech-to-Text and Text-to-Speech APIs
-   - Free tier available
-
-## 💡 Simpler Alternatives for Beginners
-
-### Option A: Start with Text-Only
-Skip voice initially, just type commands in a terminal. Add voice later.
-
-### Option B: Use Existing Frameworks
-- **Rasa**: Open-source conversational AI
-- **Mycroft**: Open-source voice assistant
-- **Leon**: Open-source personal assistant
-
-### Option C: Browser-Based First
-Build a web version using JavaScript/React before mobile apps.
-
-## 📚 Learning Resources
-
-### Tutorials
-- Python voice assistants: Search "Python voice assistant tutorial"
-- FastAPI: https://fastapi.tiangolo.com/
-- Speech recognition: https://pypi.org/project/SpeechRecognition/
-- LangChain: https://python.langchain.com/
-
-### Example Projects
-- Jarvis (GitHub): Multiple open-source implementations
-- Mycroft AI: https://github.com/MycroftAI
-- Leon: https://github.com/leon-ai/leon
-
-## 🎯 Minimal Viable Product (MVP)
-
-Start simple:
-1. ✅ Desktop Python app with text input
-2. ✅ Connect to OpenAI API for responses
-3. ✅ 3 basic commands (weather, time, search)
-4. ✅ Add voice input/output
-5. ✅ Create simple GUI
-
-Then expand gradually!
-
-## 📝 Project Structure
-```
-C.L.A.I.R.E/
-├── backend/
-│   ├── api/              # REST API endpoints
-│   ├── core/             # Core AI logic
-│   ├── skills/           # Plugin system
-│   ├── voice/            # Speech processing
-│   └── database/         # Data models
-├── desktop/              # Desktop client
-├── mobile/               # Mobile apps
-├── shared/               # Shared utilities
-├── tests/                # Unit tests
-├── docs/                 # Documentation
-├── config.example.yaml   # Example configuration
-├── requirements.txt      # Python dependencies
-└── main.py              # Entry point
-```
-
-## 🤝 Next Steps
-
-1. **Today**: Set up development environment
-2. **This Week**: Build basic text-based command system
-3. **Next Week**: Add voice capabilities
-4. **Week 3**: Integrate AI (OpenAI/local LLM)
-5. **Week 4**: Create simple GUI
-
-Remember: Start small, test often, add features gradually!
-
+### In Progress
+- 🔄 Voice interface integration
+- 🔄 Wake word detection
+- 🔄 Additional skills/plugins
 ---
+
+-- Now only terminal version and GUI version works.
+<img width="1920" height="1080" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/ff7069b6-f00e-44ec-a285-5153f7400719" />
+<img width="1920" height="1080" alt="Screenshot (17)" src="https://github.com/user-attachments/assets/56f9175b-690e-4653-a52e-1a2da93d3515" />
+
+
 
 **Created**: December 2025
 **Status**: In Development
-**License**: MIT (or your choice)
+
